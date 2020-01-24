@@ -45,7 +45,7 @@ def nyc_pigeon_organizer(data)
   pp array1
   pp array2
   m = 0
-  while m < array1.length do
+  while m < array2.length do
     if array1[m].include?(array2[m])
        array1.delete_at(m)
     end
