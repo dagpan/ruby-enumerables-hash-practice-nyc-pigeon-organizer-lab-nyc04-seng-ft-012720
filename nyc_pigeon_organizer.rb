@@ -35,17 +35,21 @@ def nyc_pigeon_organizer(data)
   pp array_male
   pp array_female
   pp name_array
-  array2.each do |name|
+  array_female.each do |name|
      m = 0
-     while m < array1.length
-         if array1[m].include?(name)
-            array1.delete_at(m)
+     while m < array_male.length
+         if array_male[m].include?(name)
+            array_male.delete_at(m)
          end
      m += 1
      end
   end
+  pp data[:gender][:male]
+  pp data[:gender][:female]
   pp array1
   pp array2
+  pp array_male
+  pp array_female
   pp name_array
   pp name_hash
   pp array_purple
@@ -59,10 +63,10 @@ def nyc_pigeon_organizer(data)
   pp name_array
   i = 0
   while i < name_array.length do
-      if array1.include?(name_array[i]) 
+      if array_male.include?(name_array[i]) 
          name_hash[name_array[i]][:gender] << "male"
       end
-      if array2.include?(name_array[i])
+      if array_female.include?(name_array[i])
          name_hash[name_array[i]][:gender] << "female"
       end
       if array_purple.include?(name_array[i]) 
