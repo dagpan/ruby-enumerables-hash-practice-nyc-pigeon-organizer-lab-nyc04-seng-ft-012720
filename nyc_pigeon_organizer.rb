@@ -16,6 +16,11 @@ def nyc_pigeon_organizer(data)
   # write your code here!
   array1 = data[:gender][:male]
   array2 = data[:gender][:female]
+  m = 0
+  array1.each do
+    if array1[m].include?(array2[m])
+       array1[m].pop
+    
   array_male = data[:gender][:male]
   array_female = data[:gender][:female]
   array_purple = data[:color][:purple]
