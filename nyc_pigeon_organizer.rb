@@ -16,8 +16,6 @@ def nyc_pigeon_organizer(data)
   # write your code here!
   array1 = data[:gender][:male]
   array2 = data[:gender][:female]
-  array_male = data[:gender][:male]
-  array_female = data[:gender][:female]
   array_purple = data[:color][:purple]
   array_grey = data[:color][:grey]
   array_white = data[:color][:white]
@@ -26,24 +24,6 @@ def nyc_pigeon_organizer(data)
   array_centralpark = data[:lives]["Central Park"]
   array_library = data[:lives]["Library"]
   array_cityhall = data[:lives]["City Hall"]
-  name_array = array1.concat(array2)
-  name_hash = Hash[name_array.collect {|name| [name, {:color => [], :lives => [], :gender => []}]}]
-  #i = 0
-  #while i < 5 do
-  #    name_hash[name_array[i]][:gender] = ["male"]
-  #    i += 1
-  #end
-  #pp name_hash
-  #i = 5
-  #while i < 7 do
-  #    name_hash[name_array[i]][:gender] = ["female"]
-  #    i += 1
-  #end
-  pp data[:gender][:male]
-  pp array_male
-  pp array_female
-  pp array1
-  pp array2
   array2.each do |name|
      m = 0
      while m < array1.length
@@ -53,8 +33,12 @@ def nyc_pigeon_organizer(data)
      m += 1
      end
   end
+  name_array = array1.concat(array2)
+  name_hash = Hash[name_array.collect {|name| [name, {:color => [], :lives => [], :gender => []}]}]
+  pp data[:gender][:male]
   pp array1
   pp array2
+  pp name_array
   pp name_hash
   pp array_purple
   pp array_grey
@@ -67,10 +51,10 @@ def nyc_pigeon_organizer(data)
   pp name_array
   i = 0
   while i < name_array.length do
-      if array_male.include?(name_array[i]) 
+      if array1.include?(name_array[i]) 
          name_hash[name_array[i]][:gender] << "male"
       end
-      if array_female.include?(name_array[i])
+      if array2.include?(name_array[i])
          name_hash[name_array[i]][:gender] << "female"
       end
       if array_purple.include?(name_array[i]) 
