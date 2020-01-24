@@ -29,12 +29,12 @@ def nyc_pigeon_organizer(data)
   i = 0
   pp name_array
   pp name_hash
-  array1.each do |name|
+  array1.each do
       name_hash[name_array[i]][:gender][i] = "male"
       i += 1
   end
   i = 5
-  array2.each do |name|
+  array2.each do
       name_hash[name_array[i]][:gender][i] = "female"
       i += 1
   end
