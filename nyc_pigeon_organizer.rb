@@ -27,9 +27,22 @@ def nyc_pigeon_organizer(data)
   name_array = array1.concat(array2)
   name_hash = Hash[name_array.collect {|name| [name, {}]}]
   i = 0
+  pp name_array
   pp name_hash
-  array_purple.each_with_index do |name, index|
-      name_hash[name_array[i]][:color] 
+  array1.each do |name|
+      name_hash[name_array[i]][:gender][i] = "male"
+      i += 1
+  end
+  i = 5
+  array2.each do |name|
+      name_hash[name_array[i]][:gender][i + ] = "female"
+  pp name_hash
+ 
+ 
+  
+  
+  #array_purple.each_with_index do |name, index|
+ #     name_hash[name_array[i]][:color] 
   
   
   
