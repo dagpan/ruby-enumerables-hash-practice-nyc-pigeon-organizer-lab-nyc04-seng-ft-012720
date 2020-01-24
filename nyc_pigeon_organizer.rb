@@ -40,11 +40,28 @@ def nyc_pigeon_organizer(data)
   pp name_hash
   result_hash = name_hash.collect
   i = 0
-  if array_purple.include?(name_array[i]) do
-     name_hash[name_array[i]][:color] = ["purple"]
- 
+  while i < 
+  if array_purple.include?(name_array[i]) 
+     name_hash[name_array[i]][:color] << "purple"
+  elsif array_grey.include?(name_array[i])
+     name_hash[name_array[i]][:color] << "grey"
+  elsif array_white.include?(name_array[i])
+     name_hash[name_array[i]][:color] << "white"
+  elsif array_brown.include?(name_array[i])
+     name_hash[name_array[i]][:color] << "brown"
+  elsif array_subway.include?(name_array[i])
+     name_hash[name_array[i]][:color] << "Subway"
+  elsif array_centralpark.include?(name_array[i])
+     name_hash[name_array[i]][:color] << "Central Park"
+  elsif array_library.include?(name_array[i])
+     name_hash[name_array[i]][:color] << "Library"
+  elsif array_cityhall.include?(name_array[i])
+     name_hash[name_array[i]][:color] << "City Hall"
+  i += 1
+  end
+  
   while i < array_purple.length do
-      name_hash[array_purple[i]][:color] = ["purple"]
+      name_hash[array_purple[i]][:color] = ["purple"
       i += 1
   end
   
