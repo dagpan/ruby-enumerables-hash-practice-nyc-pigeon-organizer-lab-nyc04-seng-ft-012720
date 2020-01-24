@@ -22,6 +22,7 @@ def nyc_pigeon_organizer(data)
   array_grey = data[:color][:grey]
   array_white = data[:color][:white]
   array_brown = data[:color][:brown]
+  array_black = data[:color][:black]
   array_subway = data[:lives]["Subway"]
   array_centralpark = data[:lives]["Central Park"]
   array_library = data[:lives]["Library"]
