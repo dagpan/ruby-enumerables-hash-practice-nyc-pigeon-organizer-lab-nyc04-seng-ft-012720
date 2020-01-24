@@ -101,6 +101,3 @@ def nyc_pigeon_organizer(data)
   end
   pp name_hash
 end
-
-
-
