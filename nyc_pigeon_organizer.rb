@@ -19,7 +19,7 @@ def nyc_pigeon_organizer(data)
   m = 0
   array1.each do
     if array1[m].include?(array2[m])
-       array1[m].pop
+       array1.delete_at(m)
     
   array_male = data[:gender][:male]
   array_female = data[:gender][:female]
