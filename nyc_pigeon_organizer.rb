@@ -40,6 +40,10 @@ def nyc_pigeon_organizer(data)
   #    i += 1
   #end
   pp data[:gender][:male]
+  pp array_male
+  pp array_female
+  pp array_1
+  pp array_2
   m = 0
   while m < array1.length do
     if array1[m].include?(array2[m])
@@ -50,8 +54,6 @@ def nyc_pigeon_organizer(data)
   pp array_1
   pp array_2
   pp name_hash
-  pp array_male
-  pp array_female
   pp array_purple
   pp array_grey
   pp array_white
