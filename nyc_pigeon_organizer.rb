@@ -25,7 +25,7 @@ def nyc_pigeon_organizer(data)
   array_library = data[:color]["Library"]
   array_cityhall = data[:color]["City Hall"]
   name_array = array1.concat(array2)
-  name_hash = Hash[name_array.collect {|name| [name, {:color = [], :lives = []}]}]
+  name_hash = Hash[name_array.collect {|name| [name, {:color => [], :lives => []}]}]
   i = 0
   while i < 5 do
       name_hash[name_array[i]][:gender] = ["male"]
