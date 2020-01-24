@@ -20,7 +20,9 @@ def nyc_pigeon_organizer(data)
   array1.each do
     if array1[m].include?(array2[m])
        array1.delete_at(m)
-    
+    end
+    m += 1
+  end
   array_male = data[:gender][:male]
   array_female = data[:gender][:female]
   array_purple = data[:color][:purple]
@@ -45,6 +47,8 @@ def nyc_pigeon_organizer(data)
   #    i += 1
   #end
   pp data[:gender][:male]
+  pp array_1
+  pp array_2
   pp name_hash
   pp array_male
   pp array_female
