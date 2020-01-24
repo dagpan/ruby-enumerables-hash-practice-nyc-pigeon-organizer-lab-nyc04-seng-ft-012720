@@ -28,13 +28,12 @@ def nyc_pigeon_organizer(data)
   name_hash = Hash[name_array.collect {|name| [name, {}]}]
   i = 0
   pp name_hash
-#  array_purple.each_with_index do |name, index|
-#     if array_purple.include?(name_array[i])
-#        name_array[i] 
-#  
-#  
+  array_purple.each_with_index do |name, index|
+      name_hash[name_array[i]][:color] 
   
   
+  
+#     if array_purple.include?(name_array[i])  
 #      if array_purple.include?(name_array[i])
   
 #  name_array.each_with_index do |name, index|
