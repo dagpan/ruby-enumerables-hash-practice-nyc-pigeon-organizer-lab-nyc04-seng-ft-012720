@@ -17,6 +17,7 @@ def nyc_pigeon_organizer(data)
   array1 = data[:gender][:male]
   array2 = data[:gender][:female]
   array_male = data[:gender][:male]
+  array_female = data[:gender][:female]
   array_purple = data[:color][:purple]
   array_grey = data[:color][:grey]
   array_white = data[:color][:white]
@@ -41,11 +42,11 @@ def nyc_pigeon_organizer(data)
   pp name_hash
   i = 0
   while i < name_array.length do
-      if array_purple.include?(name_array[i]) 
-         name_hash[name_array[i]][:color] << "purple"
+      if array_male.include?(name_array[i]) 
+         name_hash[name_array[i]][:gender] << "male"
       end
-      if array_grey.include?(name_array[i])
-         name_hash[name_array[i]][:color] << "grey"
+      if array_female.include?(name_array[i])
+         name_hash[name_array[i]][:gender] << "female"
       end
       if array_purple.include?(name_array[i]) 
          name_hash[name_array[i]][:color] << "purple"
