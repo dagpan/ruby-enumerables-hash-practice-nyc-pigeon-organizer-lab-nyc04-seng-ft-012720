@@ -33,13 +33,13 @@ def nyc_pigeon_organizer(data)
   #name_hash[]
   i = 0
   while i < 5 do
-      name_hash[name_array[i]][:gender] => ["male"]
+      name_hash[name_array[i]][:gender] = ["male"]
       i += 1
   end
   pp name_hash
   i = 5
   while i < 7 do
-      name_hash[name_array[i]][:gender] => ["female"]
+      name_hash[name_array[i]][:gender] = ["female"]
       i += 1
   end
   pp name_hash
