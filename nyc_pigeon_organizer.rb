@@ -67,7 +67,7 @@ def nyc_pigeon_organizer(data)
   pp name_array
   i = 0
   while i < name_array.length do
-      if array_male.include?(name_array[i]) 
+      if array_male && array_male.include?(name_array[i]) 
          name_hash[name_array[i]][:gender] << "male"
       end
       if array_female.include?(name_array[i])
