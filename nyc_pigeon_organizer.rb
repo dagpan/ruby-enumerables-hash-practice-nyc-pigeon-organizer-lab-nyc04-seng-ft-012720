@@ -73,16 +73,16 @@ def nyc_pigeon_organizer(data)
          name_hash[name_array[i]][:color] << "brown"
       end
       if array_subway.include?(name_array[i])
-         name_hash[name_array[i]][:color] << "Subway"
+         name_hash[name_array[i]][:lives] << "Subway"
       end
       if array_centralpark.include?(name_array[i])
-         name_hash[name_array[i]][:color] << "Central Park"
+         name_hash[name_array[i]][:lives] << "Central Park"
       end
       if array_library.include?(name_array[i])
-         name_hash[name_array[i]][:color] << "Library"
+         name_hash[name_array[i]][:lives] << "Library"
       end
       if array_cityhall.include?(name_array[i])
-         name_hash[name_array[i]][:color] << "City Hall"
+         name_hash[name_array[i]][:lives] << "City Hall"
       end
   i += 1
   end
