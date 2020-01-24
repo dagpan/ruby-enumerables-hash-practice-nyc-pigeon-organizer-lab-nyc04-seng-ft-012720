@@ -24,15 +24,6 @@ def nyc_pigeon_organizer(data)
   array_centralpark = data[:lives]["Central Park"]
   array_library = data[:lives]["Library"]
   array_cityhall = data[:lives]["City Hall"]
-  array2.each do |name|
-     m = 0
-     while m < array1.length
-         if array1[m].include?(name)
-            array1.delete_at(m)
-         end
-     m += 1
-     end
-  end
   name_array = array1.concat(array2)
   name_hash = Hash[name_array.collect {|name| [name, {:color => [], :lives => [], :gender => []}]}]
   pp data[:gender][:male]
