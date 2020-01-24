@@ -40,6 +40,17 @@ def nyc_pigeon_organizer(data)
   #    i += 1
   #end
   pp name_hash
+  array_male
+  array_female
+  array_purple
+  array_grey
+  array_white = data[:color][:white]
+  array_brown = data[:color][:brown]
+  array_subway = data[:lives]["Subway"]
+  array_centralpark = data[:color]["Central Park"]
+  array_library = data[:color]["Library"]
+  array_cityhall = data[:color]["City Hall"]
+  name_array
   i = 0
   while i < name_array.length do
       if array_male.include?(name_array[i]) 
