@@ -16,6 +16,8 @@ def nyc_pigeon_organizer(data)
   # write your code here!
   array1 = data[:gender][:male]
   array2 = data[:gender][:female]
+  array_male = data[:gender][:male]
+  array_female = data[:gender][:female]
   array_purple = data[:color][:purple]
   array_grey = data[:color][:grey]
   array_white = data[:color][:white]
@@ -27,8 +29,11 @@ def nyc_pigeon_organizer(data)
   name_array = array1.concat(array2)
   name_hash = Hash[name_array.collect {|name| [name, {:color => [], :lives => [], :gender => []}]}]
   pp data[:gender][:male]
+  pp data[:gender][:female]
   pp array1
   pp array2
+  pp array_male
+  pp array_female
   pp name_array
   array2.each do |name|
      m = 0
