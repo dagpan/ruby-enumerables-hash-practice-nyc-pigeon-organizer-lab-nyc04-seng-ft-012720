@@ -23,9 +23,9 @@ def nyc_pigeon_organizer(data)
   array_white = data[:color][:white]
   array_brown = data[:color][:brown]
   array_subway = data[:lives]["Subway"]
-  array_centralpark = data[:color]["Central Park"]
-  array_library = data[:color]["Library"]
-  array_cityhall = data[:color]["City Hall"]
+  array_centralpark = data[:lives]["Central Park"]
+  array_library = data[:lives]["Library"]
+  array_cityhall = data[:lives]["City Hall"]
   name_array = array1.concat(array2)
   name_hash = Hash[name_array.collect {|name| [name, {:color => [], :lives => [], :gender => []}]}]
   #i = 0
