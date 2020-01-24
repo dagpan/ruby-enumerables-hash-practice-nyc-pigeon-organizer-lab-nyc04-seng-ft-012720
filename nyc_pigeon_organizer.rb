@@ -39,6 +39,7 @@ def nyc_pigeon_organizer(data)
   #    name_hash[name_array[i]][:gender] = ["female"]
   #    i += 1
   #end
+  pp data[:gender][:male]
   pp name_hash
   pp array_male
   pp array_female
