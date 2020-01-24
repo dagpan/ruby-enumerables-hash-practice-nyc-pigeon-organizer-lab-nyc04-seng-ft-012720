@@ -36,6 +36,8 @@ def nyc_pigeon_organizer(data)
   i = 5
   array2.each do |name|
       name_hash[name_array[i]][:gender][i] = "female"
+      i += 1
+  end
   pp name_hash
  
  
