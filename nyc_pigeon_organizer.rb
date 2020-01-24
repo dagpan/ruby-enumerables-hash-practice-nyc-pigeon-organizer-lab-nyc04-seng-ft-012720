@@ -85,6 +85,9 @@ def nyc_pigeon_organizer(data)
       if array_brown && array_brown.include?(name_array[i])
          name_hash[name_array[i]][:color] << "brown"
       end
+      if array_black && array_black.include?(name_array[i])
+         name_hash[name_array[i]][:color] << "black"
+      end
       if array_subway && array_subway.include?(name_array[i])
          name_hash[name_array[i]][:lives] << "Subway"
       end
