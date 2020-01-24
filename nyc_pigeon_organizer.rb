@@ -28,6 +28,7 @@ def nyc_pigeon_organizer(data)
   array_cityhall = data[:lives]["City Hall"]
   name_array = array1 + array2
   name_hash = Hash[name_array.collect {|name| [name, {:color => [], :lives => [], :gender => []}]}]
+  pp data
   pp data[:gender][:male]
   pp data[:gender][:female]
   pp array1
