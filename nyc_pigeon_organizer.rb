@@ -25,7 +25,7 @@ def nyc_pigeon_organizer(data)
   array_library = data[:color]["Library"]
   array_cityhall = data[:color]["City Hall"]
   name_array = array1.concat(array2)
-  name_hash = Hash[name_array.collect {|name| [name, {:color => [], :lives => []}]}]
+  name_hash = Hash[name_array.collect {|name| [name, {:color => [], :lives => [], :gender => []}]}]
   i = 0
   while i < 5 do
       name_hash[name_array[i]][:gender] = ["male"]
@@ -42,19 +42,26 @@ def nyc_pigeon_organizer(data)
   while i < name_array.length do
       if array_purple.include?(name_array[i]) 
          name_hash[name_array[i]][:color] << "purple"
-      elsif array_grey.include?(name_array[i])
+      end
+      if array_grey.include?(name_array[i])
          name_hash[name_array[i]][:color] << "grey"
-      elsif array_white.include?(name_array[i])
+      end
+      if array_white.include?(name_array[i])
          name_hash[name_array[i]][:color] << "white"
-      elsif array_brown.include?(name_array[i])
+      end
+      if array_brown.include?(name_array[i])
          name_hash[name_array[i]][:color] << "brown"
-      elsif array_subway.include?(name_array[i])
+      end
+      if array_subway.include?(name_array[i])
          name_hash[name_array[i]][:color] << "Subway"
-      elsif array_centralpark.include?(name_array[i])
+      end
+      if array_centralpark.include?(name_array[i])
          name_hash[name_array[i]][:color] << "Central Park"
-      elsif array_library.include?(name_array[i])
+      end
+      if array_library.include?(name_array[i])
          name_hash[name_array[i]][:color] << "Library"
-      elsif array_cityhall.include?(name_array[i])
+      end
+      if array_cityhall.include?(name_array[i])
          name_hash[name_array[i]][:color] << "City Hall"
       end
   i += 1
