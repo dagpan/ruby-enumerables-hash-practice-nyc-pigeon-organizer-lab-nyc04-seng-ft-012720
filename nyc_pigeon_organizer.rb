@@ -30,15 +30,16 @@ def nyc_pigeon_organizer(data)
   pp array2
   pp name_array
   pp name_hash
+  #name_hash[]
   i = 0
   while i < 5 do
-      name_hash[name_array[i]][:gender] << "male"
+      name_hash[name_array[i]][:gender] => ["male"]
       i += 1
   end
   pp name_hash
   i = 5
-  while i < array2.legth do
-      name_hash[name_array[i]][:gender] << "female"
+  while i < 7 do
+      name_hash[name_array[i]][:gender] => ["female"]
       i += 1
   end
   pp name_hash
